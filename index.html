@@ -12,14 +12,30 @@
 </head>
   <body>
     <div class="header_container">
-        <div class = "header1">横浜国立大学</div>
-        <div class = "header2">空き教室検索</div>
+        <div class = "header1">横浜国立大学　非公認</div>
+        <div class = "header2">空き教室検索システム</div>
     </div>
-    <div class = "form" >
-        
-        <select id="strength"></select>
-        <label for="strength">残り体力を入力してください：</label>
-    </form>
+    <div class = "body_container">
+        <div class = "map_container">
+            地図
+        </div>
+
+        <div class = "form_box" >
+            <select size="1" name="dayOfWeek" class="dayOfWeek">
+                <option value="dayOfWeek">月</option>
+                <option value="dayOfWeek">火</option>
+                <option value="dayOfWeek">水</option>
+                <option value="dayOfWeek">木</option>
+                <option value="dayOfWeek">金</option>
+                <option value="dayOfWeek">土</option>
+                <option value="dayOfWeek">日</option>
+            </select>
+            <label for="dayOfWeek">　何曜日？</label>
+            <br><br>
+            <button class = "search_box">
+                調べる
+            </button>
+        </div>
     </div>
 </body>
 </html>

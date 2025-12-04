@@ -1,5 +1,7 @@
 body {
-  font-family: "Helvetica Neue",
+    background: radial-gradient(circle at top, #e4ecff 0, #f5f7fb 40%, #f7f8fc 100%);
+
+    font-family: "Helvetica Neue",
     Arial,
     "Hiragino Kaku Gothic ProN",
     "Hiragino Sans",
@@ -8,11 +10,11 @@ body {
 }
 
 .header_container{
-    margin:0;
-    padding:0;
+    margin-top:0;
+    padding-top:2vw;
     margin-left:calc(-50vw + 50%); /*画面いっぱい*/
     width:100vw; /*画面いっぱい*/
-    height:10vw;
+    height:max(10vh, 10vw);
     background-color:rgb(32, 32, 156);
 }
 
@@ -27,4 +29,29 @@ body {
     font-family: "WDXL Lubrifont JP N", sans-serif;
     font-size: 5vw;
     text-align: center;
+}
+
+.body_container{
+    margin:1vh;
+    display: flex;
+}
+
+.form_box{
+    text-align:left;
+}
+
+.form_box select{
+    width:50px;
+}
+
+.map_container{
+    border-radius:5vh;
+    margin-right:25px;
+    width:calc(90vh - max(10vh, 10vw));
+    height:calc(90vh - max(10vh, 10vw));
+    background-color:rgb(221, 244, 203);
+}
+
+.search_box{
+    width:200px;
 }

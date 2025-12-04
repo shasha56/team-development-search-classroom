@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="searched.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="search-header">
+            <h1>Find a Classroom</h1>
+            <p class="subtitle">Check availability in real-time</p>
+
+            <form id="searchForm" class="search-bar">
+                <div class="input-group">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search by floor or room number..."
+                        autocomplete="off">
+                </div>
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+        </header>
+
+        <main class="results-container">
+            <div class="table-wrapper">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Floor</th>
+                            <th>Room Details</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody">
+                        <!-- BACKEND: Iterate over search results here -->
+                        <!-- Example static data (Replace with dynamic content) -->
+                        <tr>
+                            <td>1st Floor</td>
+                            <td>
+                                <div style="font-weight: 500;">101</div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary);">Lecture Hall A</div>
+                            </td>
+                            <td>
+                                <span class="status-badge status-available">
+                                    <span class="status-dot"></span>
+                                    Available Now
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2nd Floor</td>
+                            <td>
+                                <div style="font-weight: 500;">201</div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary);">Seminar Room</div>
+                            </td>
+                            <td>
+                                <span class="status-badge status-busy">
+                                    <span class="status-dot"></span>
+                                    Occupied
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3rd Floor</td>
+                            <td>
+                                <div style="font-weight: 500;">305</div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary);">Study Room</div>
+                            </td>
+                            <td>
+                                <span class="status-badge status-available">
+                                    <span class="status-dot"></span>
+                                    Available Now
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="noResults" class="no-results hidden">
+                    <p>No classrooms found matching your search.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

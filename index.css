@@ -47,11 +47,29 @@ body {
 .map_container{
     border-radius:5vh;
     margin-right:25px;
-    width:calc(90vh - max(10vh, 10vw));
-    height:calc(90vh - max(10vh, 10vw));
+    width:50vh;
+    height:50vh;
     background-color:rgb(221, 244, 203);
 }
 
 .search_box{
     width:200px;
+}
+
+.fastSeengEmptyClassroom_container{
+    width:200px;
+    height:400px;
+    background-color:gray;
+}
+
+table {
+  border: 1px solid #000;
+}
+
+table th {
+  border: 1px solid #000;
+}
+
+table td {
+  border: 1px solid #000;
 }

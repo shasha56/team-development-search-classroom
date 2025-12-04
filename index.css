@@ -1,0 +1,30 @@
+body {
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+
+.header_container{
+    margin:0;
+    padding:0;
+    margin-left:calc(-50vw + 50%); /*画面いっぱい*/
+    width:100vw; /*画面いっぱい*/
+    height:10vw;
+    background-color:rgb(32, 32, 156);
+}
+
+.header1{
+    color: rgb(214, 218, 241);
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-size: 2vw; 
+    text-align: center;
+}
+.header2{
+    color: white;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-size: 5vw;
+    text-align: center;
+}

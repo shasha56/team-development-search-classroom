@@ -17,25 +17,74 @@
     </div>
     <div class = "body_container">
         <div class = "map_container">
-            地図
+            <image src = "YNU_MAP_J.webp" id = "ynuMap">
         </div>
-
-        <div class = "form_box" >
-            <select size="1" name="dayOfWeek" class="dayOfWeek">
-                <option value="dayOfWeek">月</option>
-                <option value="dayOfWeek">火</option>
-                <option value="dayOfWeek">水</option>
-                <option value="dayOfWeek">木</option>
-                <option value="dayOfWeek">金</option>
-                <option value="dayOfWeek">土</option>
-                <option value="dayOfWeek">日</option>
-            </select>
-            <label for="dayOfWeek">　何曜日？</label>
-            <br><br>
-            <button class = "search_box">
-                調べる
-            </button>
+        <div class = "centerContents_container" >
+            <div class = "form_container">
+                <select size="1" name="dayOfWeek" class="form_place">
+                    <option value="dayOfWeek" class = "form_contents">理工棟</option>
+                </select>
+                <label for="dayOfWeek" class="form_contents">　場所</label>
+                <br>
+                <select size="1" name="dayOfWeek" class="form_contents">
+                    <option value="dayOfWeek">月</option>
+                    <option value="dayOfWeek">火</option>
+                    <option value="dayOfWeek">水</option>
+                    <option value="dayOfWeek">木</option>
+                    <option value="dayOfWeek">金</option>
+                    <option value="dayOfWeek">土</option>
+                    <option value="dayOfWeek">日</option>
+                </select>
+                <label for="dayOfWeek" class ="form_contents">　曜日</label>
+                <br>
+                <button class = "search_box">
+                    この条件で調べる！
+                </button>
+            </div>
+            <br>
+            <table class = "fastSeengEmptyClassroom_container">
+                <tr class = "fastSeengEmptyClassroom_tr">
+                    <th colspan="2">今日の空き教室ピックアップ！</th>
+                </tr>
+                <tr class = "fastSeengEmptyClassroom_tr">
+                    <td>A101</td>
+                    <td>コンセントあり</td>
+                </tr>
+                <tr class = "fastSeengEmptyClassroom_tr">
+                    <td>A102</td>
+                    <td>コンセントなし</td>
+                </tr>
+            </table>
         </div>
+        <div class = "rightMenu_container">
+            <div class = "ourAdvertise_container">
+                <table>
+                    <tr class = "ourAdvertise_tr">
+                        <th colspan="2">広告</th>
+                    </tr>
+                    <tr class = "ourAdvertise_tr">
+                        <td>PixyInvader</td>
+                        <td>[ゲームのリンクを貼る]</td>
+                    </tr>
+                    <tr class = "ourAdvertise_tr">
+                        <td>随時追加予定</td>
+                        <td>お楽しみに</td>
+                    </tr>
+                </table>
+            </div>
+            <div class = "updateHistory_container">
+                <table>
+                    <tr class = "updateHistory_tr">
+                        <th colspan="2">更新履歴</th>
+                    </tr>
+                    <tr class = "updateHistory_tr">
+                        <td>ver1.0</td>
+                        <td>初期リリース</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
     </div>
 </body>
 </html>

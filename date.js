@@ -5,7 +5,8 @@ export const date = [
         Tuesday: '1010100',
         Wednesday: '1101101',
         Thrusday: '0010000',
-        Friday: '1101100'
+        Friday: '1101100',
+        supplement: 'コンセントなし'
     },
     {
         class: 'A101',
@@ -13,7 +14,8 @@ export const date = [
         Tuesday: '1010100',
         Wednesday: '1101101',
         Thrusday: '0010000',
-        Friday: '1101100'
+        Friday: '1101100',
+        supplement: 'コンセントあり'
     },
     {
         class: 'A101',
@@ -21,7 +23,8 @@ export const date = [
         Tuesday: '1010100',
         Wednesday: '1101101',
         Thrusday: '0010000',
-        Friday: '1101100'
+        Friday: '1101100',
+        supplement: 'コンセントなし'
     },
     {
         class: 'A101',
@@ -29,7 +32,8 @@ export const date = [
         Tuesday: '1010100',
         Wednesday: '1101101',
         Thrusday: '0010000',
-        Friday: '1101100'
+        Friday: '1101100',
+        supplement: 'コンセントなし'
     },
     {
         class: 'A101',
@@ -37,7 +41,8 @@ export const date = [
         Tuesday: '1010100',
         Wednesday: '1101101',
         Thrusday: '0010000',
-        Friday: '1101100'
+        Friday: '1101100',
+        supplement: 'コンセントあり'
     },
     {
         class: 'A101',
@@ -45,7 +50,8 @@ export const date = [
         Tuesday: '1010100',
         Wednesday: '1101101',
         Thrusday: '0010000',
-        Friday: '1101100'
+        Friday: '1101100',
+        supplement: 'コンセントなし'
     },
     {
         class: 'A101',
@@ -53,7 +59,8 @@ export const date = [
         Tuesday: '1010100',
         Wednesday: '1101101',
         Thrusday: '0010000',
-        Friday: '1101100'
+        Friday: '1101100',
+        supplement: 'コンセントなし'
     },
     {
         class: 'A101',
@@ -61,7 +68,8 @@ export const date = [
         Tuesday: '1010100',
         Wednesday: '1101101',
         Thrusday: '0010000',
-        Friday: '1101100'
+        Friday: '1101100',
+        supplement: 'コンセントあり'
     },
     {
         class: '',
@@ -69,6 +77,7 @@ export const date = [
         Tuesday: '',
         Wednesday: '',
         Thrusday: '',
-        Friday: ''
+        Friday: '',
+        supplement: ''
     },
 ]

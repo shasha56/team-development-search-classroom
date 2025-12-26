@@ -96,14 +96,28 @@ body {
     padding:0.5vh;
 }
 
-tr.fastSeengEmptyClassroom_tr th{
-    background-color:rgb(51, 51, 163);
-    color:rgb(209, 224, 247);
+tr.fastSeengEmptyClassroom_head_1 th{
+    background-color:rgb(43, 43, 146);
+    color:rgb(255, 255, 255);
 
     font-size: 35px;
     text-align: center;
     border: 1px solid #000;
     border-radius:1vw;
+}
+
+tr.fastSeengEmptyClassroom_head_2 th{
+    background-color:rgb(62, 62, 134);
+    color:rgb(239, 241, 255);
+
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+tr.fastSeengEmptyClassroom_tr td{
+    font-size: 20px;
+    border: 1px solid #000;
 }
 
 tr.fastSeengEmptyClassroom_tr td{

@@ -4,7 +4,7 @@ const tbody = document.getElementById("tbody");
 const dataLength = data.length;
 
 const date = new Date();
-const daysJP = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"];
+const daysJP = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 function makeTable(classNum, day){
     const mytr = document.createElement("tr");

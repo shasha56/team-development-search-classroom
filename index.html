@@ -4,7 +4,7 @@
     <title>空き教室検索</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="index.css"> <!--CSSの読み込み-->
-    <script src="index.js"></script> <!--jsの読み込み-->
+    <script type="module" src="index.js"></script> <!--jsの読み込み-->
     
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,17 +43,33 @@
             </div>
             <br>
             <table class = "fastSeengEmptyClassroom_container">
-                <tr class = "fastSeengEmptyClassroom_tr">
-                    <th colspan="2">今日の空き教室ピックアップ！</th>
+                <tr class = "fastSeengEmptyClassroom_head_1">
+                    <th colspan="9">今日の空き教室ピックアップ！</th>
+                </tr>
+                <tr class = "fastSeengEmptyClassroom_head_2">
+                    <th rowspan="1">教室</th>
+                    <th>1限</th>
+                    <th>2限</th>
+                    <th>3限</th>
+                    <th>4限</th>
+                    <th>5限</th>
+                    <th>6限</th>
+                    <th>7限</th>
+                    <th rowspan="1">補足事項</th>
                 </tr>
                 <tr class = "fastSeengEmptyClassroom_tr">
-                    <td>A101</td>
-                    <td>コンセントあり</td>
+                    <td id = "className">A101</td>
+                    <td id = "period1">空</td>
+                    <td id = "period2">空</td>
+                    <td id = "period3">空</td>
+                    <td id = "period4">空</td>
+                    <td id = "period5">空</td>
+                    <td id = "period6">空</td>
+                    <td id = "period7">空</td>
+                    <td id = "note">コンセントあり</td>
                 </tr>
-                <tr class = "fastSeengEmptyClassroom_tr">
-                    <td>A102</td>
-                    <td>コンセントなし</td>
-                </tr>
+
+                <tbody id = "tbody"></tbody>
             </table>
         </div>
         <div class = "rightMenu_container">

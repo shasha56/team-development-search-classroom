@@ -1,4 +1,4 @@
-const data = [
+export const data = [
     {
         class: 'A102',
         Monday: '0100000',

@@ -4,7 +4,12 @@ const dataLength = data.length; //配列のデータ数
 const tbody = document.getElementById('tbody');
 const fragment = document.createDocumentFragment();
 
-function result(){
+const params = new URLSearchParams(window.location.search); //URLパラメータの取得
+const dayOfWeek = params.get('dayOfWeek'); //dayOfWeekの値を取得
+// const place = params.get('place'); //dayOfWeekの値を取得
+
+
+function result(e){
     for(let i = 0; i < dataLength; i++){
         const tr = document.createElement("tr");
         tr.setAttribute("id","classroom" + String(i));
@@ -18,7 +23,7 @@ function result(){
 
         for(let j = 0; j < 7; j++){
             const tdFlag = document.createElement("td"); //n限目の空き状況
-            if(data[i]['Monday'][j] == "0"){
+            if(data[i][e][j] == "0"){
                 tdFlag.textContent = "空";
             } else {
                 tdFlag.textContent = "使用中";
@@ -34,4 +39,4 @@ function result(){
     }   
 }
 
-result();
+result(dayOfWeek);

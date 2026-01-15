@@ -5,6 +5,16 @@ const params = new URLSearchParams(window.location.search); //URLパラメータ
 const dayOfWeek = params.get('dayOfWeek'); //dayOfWeekの値を取得
 // const place = params.get('place'); //dayOfWeekの値を取得
 
+const dayOfWeekText = document.getElementById('dayofweek-text');
+const dayOfWeekArray = {
+    Monday:"月曜日",
+    Tuesday:"火曜日",
+    Wednesday:"水曜日",
+    Thursday:"木曜日",
+    Friday:"金曜日"
+}
+
+const option = document.querySelectorAll('option');
 
 function result(e){
 
@@ -33,8 +43,17 @@ function result(e){
         tr.appendChild(tdSup);
         fragment.appendChild(tr);
     }
-    tbody.appendChild(fragment);   
+    tbody.appendChild(fragment);
+    
+    option.forEach(option => {
+        if (option.value == e) {
+            option.selected = true;
+        } else {
+            option.selected = false; // 他のoptionのselectedを外す
+        }
+    });
 }
 
 result(dayOfWeek);
+dayOfWeekText.textContent = dayOfWeekArray[dayOfWeek];
 // result("Monday"); //test用

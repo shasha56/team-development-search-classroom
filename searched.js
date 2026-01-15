@@ -26,6 +26,7 @@ function result(e){
 
         const tdClass = document.createElement("td"); //教室名
         tdClass.textContent = data[i].class;
+        tdClass.classList.add('classroom-name');
         tr.appendChild(tdClass);
 
         for(let j = 0; j < 7; j++){

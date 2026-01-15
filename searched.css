@@ -101,6 +101,12 @@ td{
     border: 1px solid #000;
 }
 
+.classroom-name {
+    font-weight: bold;
+    background-color: #E1F5FE;
+    color: #01579B;
+}
+
 .empty{
     background-color:rgb(200, 255, 200);
 }

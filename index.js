@@ -15,6 +15,7 @@ function makeTable(classNum, day){
     
     const tdName = document.createElement("td");
     tdName.textContent = data[classNum].class;
+    tdName.classList.add('classroom-name');
     getElem.appendChild(tdName);
 
     for(let i=0;i<7;i++){

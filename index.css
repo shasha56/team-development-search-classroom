@@ -165,6 +165,12 @@ tr.updateHistory_tr td{
     font-size: 1vw;
 }
 
+.classroom-name {
+    font-weight: bold;
+    background-color: #E1F5FE;
+    color: #01579B;
+}
+
 .empty{
     background-color:rgb(200, 255, 200);
 }

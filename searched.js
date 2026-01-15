@@ -32,8 +32,10 @@ function result(e){
             const tdFlag = document.createElement("td"); //n限目の空き状況
             if(data[i][e][j] == "0"){
                 tdFlag.textContent = "空";
+                tdFlag.classList.add('empty');
             } else {
                 tdFlag.textContent = "使用中";
+                tdFlag.classList.add('occupied');
             }
             tr.appendChild(tdFlag);;
         }

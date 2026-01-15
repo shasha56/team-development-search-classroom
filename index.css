@@ -165,3 +165,10 @@ tr.updateHistory_tr td{
     font-size: 1vw;
 }
 
+.empty{
+    background-color:rgb(200, 255, 200);
+}
+
+.occupied{
+    background-color:rgb(255, 200, 200);
+}

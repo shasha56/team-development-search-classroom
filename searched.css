@@ -101,10 +101,23 @@ td{
     border: 1px solid #000;
 }
 
+.classroom-name {
+    font-weight: bold;
+    background-color: #E1F5FE;
+    color: #01579B;
+}
+
 .empty{
     background-color:rgb(200, 255, 200);
 }
 
 .occupied{
     background-color:rgb(255, 200, 200);
+}
+
+.has-socket {
+    background-color: #fff9c4;
+}
+.no-socket {
+    background-color: #eeeeee;
 }

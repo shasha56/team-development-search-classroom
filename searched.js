@@ -26,6 +26,7 @@ function result(e){
 
         const tdClass = document.createElement("td"); //教室名
         tdClass.textContent = data[i].class;
+        tdClass.classList.add('classroom-name');
         tr.appendChild(tdClass);
 
         for(let j = 0; j < 7; j++){
@@ -42,6 +43,11 @@ function result(e){
         
         const tdSup = document.createElement("td"); //補足
         tdSup.textContent = data[i].supplement;
+        if(data[i].supplement == "コンセントあり"){
+            tdSup.classList.add('has-socket');
+        } else {
+            tdSup.classList.add('no-socket');
+        }
         tr.appendChild(tdSup);
         fragment.appendChild(tr);
     }

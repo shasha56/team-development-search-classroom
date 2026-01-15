@@ -15,6 +15,7 @@ function makeTable(classNum, day){
     
     const tdName = document.createElement("td");
     tdName.textContent = data[classNum].class;
+    tdName.classList.add('classroom-name');
     getElem.appendChild(tdName);
 
     for(let i=0;i<7;i++){
@@ -30,6 +31,11 @@ function makeTable(classNum, day){
     }
     const tdSup = document.createElement("td");
     tdSup.textContent = data[classNum].supplement;
+    if(data[classNum].supplement == "コンセントあり"){
+        tdSup.classList.add('has-socket');
+    } else {
+            tdSup.classList.add('no-socket');
+    }
     getElem.appendChild(tdSup);
 }
 

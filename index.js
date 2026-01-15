@@ -20,9 +20,11 @@ function makeTable(classNum, day){
     for(let i=0;i<7;i++){
         const tdox = document.createElement("td");
         if(data[classNum][day][i]=="0"){
-            tdox.textContent = "o";
+            tdox.textContent = "空";
+            tdox.classList.add('empty');
         } else {
-            tdox.textContent = "x";
+            tdox.textContent = "使用中";
+            tdox.classList.add('occupied');
         }
         getElem.appendChild(tdox);
     }

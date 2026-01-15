@@ -1,163 +1,64 @@
 <!DOCTYPE html>
-<html lang="ja">
-
+<html>
 <head>
+    <title>空き教室検索結果</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>教室検索</title>
+
+    <link rel="stylesheet" href="searched.css"> <!--CSSの読み込み-->
+    <script type="module" src="searched.js"></script> <!--jsの読み込み-->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="searched.css">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Hachi+Maru+Pop&family=WDXL+Lubrifont+JP+N&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <header class="search-header">
-            <h1>教室を探す</h1>
-            <p class="subtitle">リアルタイムで空き状況を確認</p>
-
-            <form id="searchForm" class="search-bar">
-                <div class="input-group">
-                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                    <input type="text" id="searchInput" placeholder="階数または部屋番号で検索..." autocomplete="off">
+    <div class = "header_container">
+        <div class = "header1">横浜国立大学　非公認</div>
+        <div class = "header2">空き教室検索システム</div>
+    </div>
+    <div class = "body_container">
+        <div class = "centerContents_container" >
+            <form action="searched.html">
+                <div class = "form_container">
+                    <select size="1" name="place" class="form_place">
+                        <option value="rikoA" class = "form_contents">理工棟A</option>
+                    </select>
+                    <label for="dayOfWeek" class="form_contents">　場所</label>
+                    <br>
+                    <select size="1" name="dayOfWeek" class="form_contents">
+                        <option value="Monday">月</option>
+                        <option value="Tuesday">火</option>
+                        <option value="Wednesday">水</option>
+                        <option value="Thursday">木</option>
+                        <option value="Friday">金</option>
+                        <option value="Saturday">土</option>
+                        <option value="Sunday">日</option>
+                    </select>
+                    <label for="dayOfWeek" class ="form_contents">　曜日</label>
+                    <br>
+                    <button class = "search_box">
+                        この条件で調べる！
+                    </button>
                 </div>
-                <button type="submit" class="search-btn">検索</button>
             </form>
-        </header>
-
-        <main class="results-container">
-            <!-- Controls Bar -->
-            <div class="controls-bar">
-                <div class="control-group">
-                    <details class="dropdown">
-                        <summary class="btn-outline">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <line x1="21" y1="10" x2="3" y2="10"></line>
-                                <line x1="21" y1="6" x2="3" y2="6"></line>
-                                <line x1="21" y1="14" x2="3" y2="14"></line>
-                                <line x1="21" y1="18" x2="3" y2="18"></line>
-                            </svg>
-                            並び替え
-                        </summary>
-                        <div class="dropdown-menu">
-                            <label class="dropdown-item">
-                                <input type="radio" name="sort" checked> 階数 (昇順)
-                            </label>
-                            <label class="dropdown-item">
-                                <input type="radio" name="sort"> 階数 (降順)
-                            </label>
-                            <label class="dropdown-item">
-                                <input type="radio" name="sort"> 状況
-                            </label>
-                        </div>
-                    </details>
-
-                    <details class="dropdown">
-                        <summary class="btn-outline">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-                            </svg>
-                            絞り込み
-                        </summary>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-section">
-                                <span class="dropdown-header">状況</span>
-                                <label class="dropdown-item">
-                                    <input type="checkbox" checked> 空室
-                                </label>
-                                <label class="dropdown-item">
-                                    <input type="checkbox" checked> 使用中
-                                </label>
-                            </div>
-                            <div class="dropdown-divider"></div>
-                            <div class="dropdown-section">
-                                <span class="dropdown-header">階</span>
-                                <label class="dropdown-item">
-                                    <input type="checkbox" checked> 1階
-                                </label>
-                                <label class="dropdown-item">
-                                    <input type="checkbox" checked> 2階
-                                </label>
-                                <label class="dropdown-item">
-                                    <input type="checkbox" checked> 3階
-                                </label>
-                            </div>
-                        </div>
-                    </details>
-                </div>
-                <div class="results-count">
-                    <span>3</span> 件の結果
-                </div>
-            </div>
-
-            <div class="table-wrapper">
-                <table id="resultsTable">
-                    <thead>
-                        <tr>
-                            <th>階</th>
-                            <th>部屋の詳細</th>
-                            <th>状況</th>
-                        </tr>
-                    </thead>
-                    <tbody id="resultsBody">
-                        <!-- バックエンド: ここで検索結果を反復処理してください -->
-                        <!-- 静的データの例（動的コンテンツに置き換えてください） -->
-                        <tr>
-                            <td>1階</td>
-                            <td>
-                                <div style="font-weight: 500;">101</div>
-                                <div style="font-size: 0.875rem; color: var(--text-secondary);">講義室A</div>
-                            </td>
-                            <td>
-                                <span class="status-badge status-available">
-                                    <span class="status-dot"></span>
-                                    空室
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2階</td>
-                            <td>
-                                <div style="font-weight: 500;">201</div>
-                                <div style="font-size: 0.875rem; color: var(--text-secondary);">ゼミ室</div>
-                            </td>
-                            <td>
-                                <span class="status-badge status-busy">
-                                    <span class="status-dot"></span>
-                                    使用中
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3階</td>
-                            <td>
-                                <div style="font-weight: 500;">305</div>
-                                <div style="font-size: 0.875rem; color: var(--text-secondary);">自習室</div>
-                            </td>
-                            <td>
-                                <span class="status-badge status-available">
-                                    <span class="status-dot"></span>
-                                    空室
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div id="noResults" class="no-results hidden">
-                    <p>検索条件に一致する教室は見つかりませんでした。</p>
-                </div>
-            </div>
-        </main>
+            <br>
+            <div id="dayofweek-text"></div>
+            <table class = "result_container">
+                <thead>
+                    <th rowspan="1">教室</th>
+                    <th>1限</th>
+                    <th>2限</th>
+                    <th>3限</th>
+                    <th>4限</th>
+                    <th>5限</th>
+                    <th>6限</th>
+                    <th>7限</th>
+                    <th rowspan="1">補足事項</th>
+                </thead>
+                <tbody id = "tbody"></tbody>
+            </table>
+        </div>        
     </div>
 </body>
 

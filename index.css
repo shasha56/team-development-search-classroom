@@ -172,3 +172,10 @@ tr.updateHistory_tr td{
 .occupied{
     background-color:rgb(255, 200, 200);
 }
+
+.has-socket {
+    background-color: #fff9c4;
+}
+.no-socket {
+    background-color: #eeeeee;
+}

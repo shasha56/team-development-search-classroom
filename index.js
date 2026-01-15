@@ -30,6 +30,11 @@ function makeTable(classNum, day){
     }
     const tdSup = document.createElement("td");
     tdSup.textContent = data[classNum].supplement;
+    if(data[classNum].supplement == "コンセントあり"){
+        tdSup.classList.add('has-socket');
+    } else {
+            tdSup.classList.add('no-socket');
+    }
     getElem.appendChild(tdSup);
 }
 

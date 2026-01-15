@@ -100,3 +100,11 @@ td{
     font-size: 20px;
     border: 1px solid #000;
 }
+
+.empty{
+    background-color:rgb(200, 255, 200);
+}
+
+.occupied{
+    background-color:rgb(255, 200, 200);
+}
